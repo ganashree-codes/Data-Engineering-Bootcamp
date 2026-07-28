@@ -1,0 +1,1590 @@
+[0m14:31:38.142316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166E691D2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166E9083ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166E9083750>]}
+
+
+============================== 14:31:38.149564 | 755b5b15-4f7f-448c-a1cf-c3718a8eb98c ==============================
+[0m14:31:38.149564 [info ] [MainThread]: Running with dbt=1.12.0
+[0m14:31:38.150745 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\ganas\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt seed', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\dbt_demo\\customer_segment_pipeline_lab3\\logs'}
+[0m14:31:38.386824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '755b5b15-4f7f-448c-a1cf-c3718a8eb98c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166E700DA70>]}
+[0m14:31:38.456147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '755b5b15-4f7f-448c-a1cf-c3718a8eb98c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166E9207020>]}
+[0m14:31:38.458480 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m14:31:38.658730 [debug] [MainThread]: checksum: af7589022dc7d326646b53de9309bcceb4e4ca31a8788b42225a83f7cb73893b, vars: {}, profile: customer_segment_pipeline_lab3, target: dev, version: 1.12.0
+[0m14:31:38.659753 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m14:31:38.660404 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '755b5b15-4f7f-448c-a1cf-c3718a8eb98c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166E9177550>]}
+[0m14:31:40.271467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '755b5b15-4f7f-448c-a1cf-c3718a8eb98c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166E8E73E30>]}
+[0m14:31:40.366586 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\manifest.json
+[0m14:31:40.371035 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\semantic_manifest.json
+[0m14:31:40.391949 [debug] [MainThread]: Wrote artifact OsiDocument to C:\dbt_demo\customer_segment_pipeline_lab3\target\osi_document.json
+[0m14:31:40.403873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '755b5b15-4f7f-448c-a1cf-c3718a8eb98c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166E9A9EB30>]}
+[0m14:31:40.404322 [info ] [MainThread]: Found 2 models, 1 seed, 4 data tests, 486 macros
+[0m14:31:40.404904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '755b5b15-4f7f-448c-a1cf-c3718a8eb98c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166EAF7AF70>]}
+[0m14:31:40.406673 [info ] [MainThread]: 
+[0m14:31:40.407264 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:31:40.407654 [info ] [MainThread]: 
+[0m14:31:40.408221 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m14:31:40.409403 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m14:31:40.470077 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m14:31:40.470612 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m14:31:40.470995 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:31:40.488845 [debug] [ThreadPool]: SQL status: OK in 0.018 seconds
+[0m14:31:40.490221 [debug] [ThreadPool]: On list_dev: Close
+[0m14:31:40.490992 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m14:31:40.491480 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m14:31:40.496826 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:31:40.497280 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m14:31:40.497548 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:31:40.498424 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m14:31:40.499618 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:31:40.499906 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m14:31:40.500342 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:31:40.500596 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:31:40.500818 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m14:31:40.501287 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:31:40.502027 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m14:31:40.502394 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:31:40.502636 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m14:31:40.503045 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:31:40.503368 [debug] [ThreadPool]: On create_dev_main: Close
+[0m14:31:40.508607 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m14:31:40.512832 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:31:40.513237 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m14:31:40.513614 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:31:40.514186 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m14:31:40.514451 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:31:40.514688 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m14:31:40.517791 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m14:31:40.518813 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m14:31:40.519870 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m14:31:40.520164 [debug] [ThreadPool]: On list_dev_main: Close
+[0m14:31:40.520848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '755b5b15-4f7f-448c-a1cf-c3718a8eb98c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166EB120B90>]}
+[0m14:31:40.521445 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:31:40.521721 [debug] [MainThread]: On master: BEGIN
+[0m14:31:40.521975 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:31:40.522517 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m14:31:40.522804 [debug] [MainThread]: On master: COMMIT
+[0m14:31:40.523050 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:31:40.523316 [debug] [MainThread]: On master: COMMIT
+[0m14:31:40.523734 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:31:40.523988 [debug] [MainThread]: On master: Close
+[0m14:31:40.526555 [debug] [Thread-1 (]: Began running node seed.customer_segment_pipeline_lab3.sales_data
+[0m14:31:40.527044 [info ] [Thread-1 (]: 1 of 1 START seed file main.sales_data ......................................... [RUN]
+[0m14:31:40.527699 [debug] [Thread-1 (]: Acquiring new duckdb connection 'seed.customer_segment_pipeline_lab3.sales_data'
+[0m14:31:40.528030 [debug] [Thread-1 (]: Began compiling node seed.customer_segment_pipeline_lab3.sales_data
+[0m14:31:40.528323 [debug] [Thread-1 (]: Began executing node seed.customer_segment_pipeline_lab3.sales_data
+[0m14:31:40.553585 [debug] [Thread-1 (]: Using duckdb connection "seed.customer_segment_pipeline_lab3.sales_data"
+[0m14:31:40.554057 [debug] [Thread-1 (]: On seed.customer_segment_pipeline_lab3.sales_data: BEGIN
+[0m14:31:40.554400 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:31:40.555274 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:31:40.555639 [debug] [Thread-1 (]: Using duckdb connection "seed.customer_segment_pipeline_lab3.sales_data"
+[0m14:31:40.555944 [debug] [Thread-1 (]: On seed.customer_segment_pipeline_lab3.sales_data: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "seed.customer_segment_pipeline_lab3.sales_data"} */
+
+    create table "dev"."main"."sales_data" ("order_id" integer,"customer" text,"product" text,"amount" integer)
+  
+[0m14:31:40.556725 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:31:40.566744 [debug] [Thread-1 (]: Using duckdb connection "seed.customer_segment_pipeline_lab3.sales_data"
+[0m14:31:40.567214 [debug] [Thread-1 (]: On seed.customer_segment_pipeline_lab3.sales_data: 
+          COPY "dev"."main"."sales_data" FROM 'C:\dbt_demo\customer_segment_pipeline_lab3\seeds\sales_data.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m14:31:40.572366 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m14:31:40.577557 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.customer_segment_pipeline_lab3.sales_data"
+[0m14:31:40.592660 [debug] [Thread-1 (]: On seed.customer_segment_pipeline_lab3.sales_data: COMMIT
+[0m14:31:40.593056 [debug] [Thread-1 (]: Using duckdb connection "seed.customer_segment_pipeline_lab3.sales_data"
+[0m14:31:40.593623 [debug] [Thread-1 (]: On seed.customer_segment_pipeline_lab3.sales_data: COMMIT
+[0m14:31:40.596132 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m14:31:40.598076 [debug] [Thread-1 (]: On seed.customer_segment_pipeline_lab3.sales_data: Close
+[0m14:31:40.600001 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '755b5b15-4f7f-448c-a1cf-c3718a8eb98c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166EAECDBD0>]}
+[0m14:31:40.600504 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file main.sales_data ..................................... [[32mINSERT 8[0m in 0.07s]
+[0m14:31:40.601122 [debug] [Thread-1 (]: Finished running node seed.customer_segment_pipeline_lab3.sales_data
+[0m14:31:40.602348 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:31:40.602652 [debug] [MainThread]: On master: BEGIN
+[0m14:31:40.602900 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:31:40.603456 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m14:31:40.603746 [debug] [MainThread]: On master: COMMIT
+[0m14:31:40.603994 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:31:40.604211 [debug] [MainThread]: On master: COMMIT
+[0m14:31:40.604608 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:31:40.604860 [debug] [MainThread]: On master: Close
+[0m14:31:40.605193 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:31:40.605446 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m14:31:40.605655 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m14:31:40.605844 [debug] [MainThread]: Connection 'seed.customer_segment_pipeline_lab3.sales_data' was properly closed.
+[0m14:31:40.606065 [info ] [MainThread]: 
+[0m14:31:40.606385 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 0.20 seconds (0.20s).
+[0m14:31:40.607019 [debug] [MainThread]: Command end result
+[0m14:31:40.643836 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\manifest.json
+[0m14:31:40.648073 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\semantic_manifest.json
+[0m14:31:40.651858 [debug] [MainThread]: Wrote artifact OsiDocument to C:\dbt_demo\customer_segment_pipeline_lab3\target\osi_document.json
+[0m14:31:40.659319 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\dbt_demo\customer_segment_pipeline_lab3\target\run_results.json
+[0m14:31:40.659855 [info ] [MainThread]: 
+[0m14:31:40.660696 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:31:40.661369 [info ] [MainThread]: 
+[0m14:31:40.661910 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1
+[0m14:31:40.663142 [debug] [MainThread]: Command `dbt seed` succeeded at 14:31:40.662930 after 2.75 seconds
+[0m14:31:40.663753 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166E9B0FBB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166EB1E3C80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000166EAF2A5D0>]}
+[0m14:31:40.664417 [debug] [MainThread]: Flushing usage events
+[0m14:31:41.407897 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:38:58.549960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB2F6D2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB56C3ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB56C3750>]}
+
+
+============================== 14:38:58.556820 | 6355d36f-b1bd-465e-8c93-9081c788742a ==============================
+[0m14:38:58.556820 [info ] [MainThread]: Running with dbt=1.12.0
+[0m14:38:58.557773 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ganas\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\dbt_demo\\customer_segment_pipeline_lab3\\logs'}
+[0m14:38:58.793311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6355d36f-b1bd-465e-8c93-9081c788742a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB3651A70>]}
+[0m14:38:58.861983 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6355d36f-b1bd-465e-8c93-9081c788742a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB5843020>]}
+[0m14:38:58.864377 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m14:38:59.058617 [debug] [MainThread]: checksum: af7589022dc7d326646b53de9309bcceb4e4ca31a8788b42225a83f7cb73893b, vars: {}, profile: customer_segment_pipeline_lab3, target: dev, version: 1.12.0
+[0m14:38:59.262933 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m14:38:59.263514 [debug] [MainThread]: Partial parsing: added file: customer_segment_pipeline_lab3://models\example\customer_segment.sql
+[0m14:38:59.263906 [debug] [MainThread]: Partial parsing: added file: customer_segment_pipeline_lab3://models\customer_sales.sql
+[0m14:38:59.580057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6355d36f-b1bd-465e-8c93-9081c788742a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB5F23250>]}
+[0m14:38:59.676135 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\manifest.json
+[0m14:38:59.679246 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\semantic_manifest.json
+[0m14:38:59.699840 [debug] [MainThread]: Wrote artifact OsiDocument to C:\dbt_demo\customer_segment_pipeline_lab3\target\osi_document.json
+[0m14:38:59.712320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6355d36f-b1bd-465e-8c93-9081c788742a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB62506E0>]}
+[0m14:38:59.712886 [info ] [MainThread]: Found 4 models, 1 seed, 4 data tests, 486 macros
+[0m14:38:59.713418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6355d36f-b1bd-465e-8c93-9081c788742a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB61F7A10>]}
+[0m14:38:59.715786 [info ] [MainThread]: 
+[0m14:38:59.716319 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:38:59.716756 [info ] [MainThread]: 
+[0m14:38:59.717331 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m14:38:59.722182 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m14:38:59.778133 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m14:38:59.778534 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m14:38:59.778820 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:38:59.795273 [debug] [ThreadPool]: SQL status: OK in 0.016 seconds
+[0m14:38:59.796525 [debug] [ThreadPool]: On list_dev: Close
+[0m14:38:59.797294 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m14:38:59.797805 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m14:38:59.803149 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:38:59.803522 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m14:38:59.803865 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:38:59.804712 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m14:38:59.805993 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:38:59.806288 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m14:38:59.806718 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:38:59.806978 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:38:59.807236 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m14:38:59.807726 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:38:59.808426 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m14:38:59.808696 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:38:59.808920 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m14:38:59.809320 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:38:59.809571 [debug] [ThreadPool]: On create_dev_main: Close
+[0m14:38:59.811236 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m14:38:59.815458 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:38:59.815764 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m14:38:59.816008 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:38:59.816517 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:38:59.816771 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:38:59.817140 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m14:38:59.820979 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m14:38:59.822111 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m14:38:59.823230 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m14:38:59.823513 [debug] [ThreadPool]: On list_dev_main: Close
+[0m14:38:59.824464 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6355d36f-b1bd-465e-8c93-9081c788742a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB645B5F0>]}
+[0m14:38:59.824871 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:38:59.825124 [debug] [MainThread]: On master: BEGIN
+[0m14:38:59.825342 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:38:59.825798 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:38:59.826081 [debug] [MainThread]: On master: COMMIT
+[0m14:38:59.826343 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:38:59.826557 [debug] [MainThread]: On master: COMMIT
+[0m14:38:59.826926 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:38:59.827171 [debug] [MainThread]: On master: Close
+[0m14:38:59.830325 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:38:59.830846 [info ] [Thread-1 (]: 1 of 4 START sql view model main.customer_sales ................................ [RUN]
+[0m14:38:59.831562 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.customer_segment_pipeline_lab3.customer_sales'
+[0m14:38:59.831887 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:38:59.837735 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:38:59.839146 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:38:59.890395 [debug] [Thread-1 (]: Writing runtime sql for node "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:38:59.891848 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:38:59.892235 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: BEGIN
+[0m14:38:59.892521 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:38:59.893434 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:38:59.893875 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:38:59.894213 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_sales"} */
+
+  
+  create view "dev"."main"."customer_sales__dbt_tmp" as (
+    SELECT
+    customer,
+    SUM(amount) AS tatal_sales
+FROM "dev"."main"."sales_data"
+GROUP BY customer
+  );
+
+[0m14:38:59.895102 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:38:59.901282 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:38:59.901908 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_sales"} */
+alter view "dev"."main"."customer_sales__dbt_tmp" rename to "customer_sales"
+[0m14:38:59.902877 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:38:59.914680 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: COMMIT
+[0m14:38:59.915072 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:38:59.915374 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: COMMIT
+[0m14:38:59.919235 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m14:38:59.923668 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:38:59.924038 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_sales"} */
+
+      drop view if exists "dev"."main"."customer_sales__dbt_backup" cascade
+    
+[0m14:38:59.924663 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:38:59.926836 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: Close
+[0m14:38:59.928630 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6355d36f-b1bd-465e-8c93-9081c788742a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB64A5790>]}
+[0m14:38:59.929252 [info ] [Thread-1 (]: 1 of 4 OK created sql view model main.customer_sales ........................... [[32mOK[0m in 0.10s]
+[0m14:38:59.930141 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:38:59.930518 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:38:59.931170 [info ] [Thread-1 (]: 2 of 4 START sql table model main.my_first_dbt_model ........................... [RUN]
+[0m14:38:59.931824 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.customer_segment_pipeline_lab3.customer_sales, now model.customer_segment_pipeline_lab3.my_first_dbt_model)
+[0m14:38:59.932170 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:38:59.933876 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:38:59.935170 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:38:59.952596 [debug] [Thread-1 (]: Writing runtime sql for node "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:38:59.954268 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:38:59.954671 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: BEGIN
+[0m14:38:59.954981 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:38:59.955597 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:38:59.956055 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:38:59.956376 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_first_dbt_model"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."my_first_dbt_model__dbt_tmp"
+  
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+  
+[0m14:38:59.957552 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:38:59.959673 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:38:59.960016 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m14:38:59.960621 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:38:59.965281 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: COMMIT
+[0m14:38:59.965655 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:38:59.965949 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: COMMIT
+[0m14:38:59.968808 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m14:38:59.970382 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:38:59.971046 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_first_dbt_model"} */
+
+      drop table if exists "dev"."main"."my_first_dbt_model__dbt_backup" cascade
+    
+[0m14:38:59.971648 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:38:59.974081 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: Close
+[0m14:38:59.975046 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6355d36f-b1bd-465e-8c93-9081c788742a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB624DBD0>]}
+[0m14:38:59.975634 [info ] [Thread-1 (]: 2 of 4 OK created sql table model main.my_first_dbt_model ...................... [[32mOK[0m in 0.04s]
+[0m14:38:59.976515 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:38:59.976893 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:38:59.977542 [info ] [Thread-1 (]: 3 of 4 START sql view model main.customer_segment .............................. [RUN]
+[0m14:38:59.978312 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.customer_segment_pipeline_lab3.my_first_dbt_model, now model.customer_segment_pipeline_lab3.customer_segment)
+[0m14:38:59.978677 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:38:59.980976 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:38:59.982748 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:38:59.986955 [debug] [Thread-1 (]: Writing runtime sql for node "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:38:59.988464 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:38:59.988810 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: BEGIN
+[0m14:38:59.989096 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:38:59.989689 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:38:59.989988 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:38:59.990261 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_segment"} */
+
+  
+  create view "dev"."main"."customer_segment__dbt_tmp" as (
+    SELECT
+    customer,
+    total_sales
+    CASE
+        WHEN total_sales > 100000 THEN 'High Value Customer'
+        WHEN total_sales BETWEEN 50000 AND 100000 THEN 'Medium value Customer'
+        ELSE 'Low Value Customer'
+    END AS customer_segment
+FROM "dev"."main"."customer_sales"
+  );
+
+[0m14:38:59.990954 [debug] [Thread-1 (]: DuckDB adapter: duckdb error: Parser Error: syntax error at or near "CASE"
+
+LINE 8:     CASE
+            ^
+[0m14:38:59.991299 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_segment"} */
+
+  
+  create view "dev"."main"."customer_segment__dbt_tmp" as (
+    SELECT
+    customer,
+    total_sales
+    CASE
+        WHEN total_sales > 100000 THEN 'High Value Customer'
+        WHEN total_sales BETWEEN 50000 AND 100000 THEN 'Medium value Customer'
+        ELSE 'Low Value Customer'
+    END AS customer_segment
+FROM "dev"."main"."customer_sales"
+  );
+
+[0m14:38:59.991633 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m14:38:59.991902 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: ROLLBACK
+[0m14:38:59.993714 [debug] [Thread-1 (]: Failed to rollback 'model.customer_segment_pipeline_lab3.customer_segment'
+[0m14:38:59.994152 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: Close
+[0m14:38:59.999713 [debug] [Thread-1 (]: Runtime Error in model customer_segment (models\example\customer_segment.sql)
+  Parser Error: syntax error at or near "CASE"
+  
+  LINE 8:     CASE
+              ^
+[0m14:39:00.000230 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6355d36f-b1bd-465e-8c93-9081c788742a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB668CAF0>]}
+[0m14:39:00.000825 [error] [Thread-1 (]: 3 of 4 ERROR creating sql view model main.customer_segment ..................... [[31mERROR[0m in 0.02s]
+[0m14:39:00.001636 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:39:00.002000 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:39:00.003028 [debug] [Thread-4 (]: Marking all children of 'model.customer_segment_pipeline_lab3.customer_segment' to be skipped because of status 'error'.  Reason: Runtime Error in model customer_segment (models\example\customer_segment.sql)
+  Parser Error: syntax error at or near "CASE"
+  
+  LINE 8:     CASE
+              ^.
+[0m14:39:00.002418 [info ] [Thread-1 (]: 4 of 4 START sql view model main.my_second_dbt_model ........................... [RUN]
+[0m14:39:00.004422 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.customer_segment_pipeline_lab3.customer_segment, now model.customer_segment_pipeline_lab3.my_second_dbt_model)
+[0m14:39:00.004802 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:39:00.007563 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:39:00.012060 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:39:00.019178 [debug] [Thread-1 (]: Writing runtime sql for node "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:39:00.023736 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:39:00.025668 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: BEGIN
+[0m14:39:00.027009 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:39:00.029730 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m14:39:00.031008 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:39:00.032064 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_second_dbt_model"} */
+
+  
+  create view "dev"."main"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dev"."main"."my_first_dbt_model"
+where id = 1
+  );
+
+[0m14:39:00.034870 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:39:00.040529 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:39:00.041675 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m14:39:00.042385 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:39:00.043748 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: COMMIT
+[0m14:39:00.044425 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:39:00.044874 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: COMMIT
+[0m14:39:00.046235 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:39:00.049047 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:39:00.049464 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_second_dbt_model"} */
+
+      drop view if exists "dev"."main"."my_second_dbt_model__dbt_backup" cascade
+    
+[0m14:39:00.050140 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:39:00.051357 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: Close
+[0m14:39:00.051956 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6355d36f-b1bd-465e-8c93-9081c788742a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB6700C50>]}
+[0m14:39:00.052602 [info ] [Thread-1 (]: 4 of 4 OK created sql view model main.my_second_dbt_model ...................... [[32mOK[0m in 0.05s]
+[0m14:39:00.053477 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:39:00.054877 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:39:00.055742 [debug] [MainThread]: On master: BEGIN
+[0m14:39:00.056030 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:39:00.056664 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m14:39:00.057000 [debug] [MainThread]: On master: COMMIT
+[0m14:39:00.057295 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:39:00.057551 [debug] [MainThread]: On master: COMMIT
+[0m14:39:00.058003 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:39:00.058346 [debug] [MainThread]: On master: Close
+[0m14:39:00.058746 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:39:00.059000 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m14:39:00.059228 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m14:39:00.059429 [debug] [MainThread]: Connection 'model.customer_segment_pipeline_lab3.my_second_dbt_model' was properly closed.
+[0m14:39:00.059743 [info ] [MainThread]: 
+[0m14:39:00.060189 [info ] [MainThread]: Finished running 1 table model, 3 view models in 0 hours 0 minutes and 0.34 seconds (0.34s).
+[0m14:39:00.061261 [debug] [MainThread]: Command end result
+[0m14:39:00.096290 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\manifest.json
+[0m14:39:00.099497 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\semantic_manifest.json
+[0m14:39:00.102552 [debug] [MainThread]: Wrote artifact OsiDocument to C:\dbt_demo\customer_segment_pipeline_lab3\target\osi_document.json
+[0m14:39:00.109163 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\dbt_demo\customer_segment_pipeline_lab3\target\run_results.json
+[0m14:39:00.109466 [info ] [MainThread]: 
+[0m14:39:00.109969 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:39:00.110421 [info ] [MainThread]: 
+[0m14:39:00.110879 [error] [MainThread]: [[31mERROR[0m]: in model customer_segment (models\example\customer_segment.sql)
+[0m14:39:00.111377 [error] [MainThread]:   Runtime Error in model customer_segment (models\example\customer_segment.sql)
+  Parser Error: syntax error at or near "CASE"
+  
+  LINE 8:     CASE
+              ^
+[0m14:39:00.111759 [info ] [MainThread]: 
+[0m14:39:00.112187 [info ] [MainThread]:   compiled code at target\compiled\customer_segment_pipeline_lab3\models\example\customer_segment.sql
+[0m14:39:00.112584 [info ] [MainThread]: 
+[0m14:39:00.112997 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 REUSED=0 TOTAL=4
+[0m14:39:00.113902 [debug] [MainThread]: Command `dbt run` failed at 14:39:00.113726 after 1.79 seconds
+[0m14:39:00.114283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB570ACF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB54DD5C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFB3C22A50>]}
+[0m14:39:00.114621 [debug] [MainThread]: Flushing usage events
+[0m14:39:00.938511 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:40:19.062904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D4943D2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D4BB93ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D4BB93750>]}
+
+
+============================== 14:40:19.068168 | 44436ebd-19a7-42ba-a2d4-d4b9c6160df4 ==============================
+[0m14:40:19.068168 [info ] [MainThread]: Running with dbt=1.12.0
+[0m14:40:19.069422 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ganas\\.dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\dbt_demo\\customer_segment_pipeline_lab3\\logs'}
+[0m14:40:19.308615 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '44436ebd-19a7-42ba-a2d4-d4b9c6160df4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D49B25A70>]}
+[0m14:40:19.374686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '44436ebd-19a7-42ba-a2d4-d4b9c6160df4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D4BD13020>]}
+[0m14:40:19.376891 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m14:40:19.565547 [debug] [MainThread]: checksum: af7589022dc7d326646b53de9309bcceb4e4ca31a8788b42225a83f7cb73893b, vars: {}, profile: customer_segment_pipeline_lab3, target: dev, version: 1.12.0
+[0m14:40:19.766895 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:40:19.767489 [debug] [MainThread]: Partial parsing: updated file: customer_segment_pipeline_lab3://models\example\customer_segment.sql
+[0m14:40:20.071560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '44436ebd-19a7-42ba-a2d4-d4b9c6160df4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D4C4E3850>]}
+[0m14:40:20.157394 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\manifest.json
+[0m14:40:20.161518 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\semantic_manifest.json
+[0m14:40:20.179476 [debug] [MainThread]: Wrote artifact OsiDocument to C:\dbt_demo\customer_segment_pipeline_lab3\target\osi_document.json
+[0m14:40:20.190397 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '44436ebd-19a7-42ba-a2d4-d4b9c6160df4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D4C814500>]}
+[0m14:40:20.190872 [info ] [MainThread]: Found 4 models, 1 seed, 4 data tests, 486 macros
+[0m14:40:20.191519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '44436ebd-19a7-42ba-a2d4-d4b9c6160df4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D4C7B3A10>]}
+[0m14:40:20.193407 [info ] [MainThread]: 
+[0m14:40:20.194037 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:40:20.194565 [info ] [MainThread]: 
+[0m14:40:20.195231 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m14:40:20.199890 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m14:40:20.254034 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m14:40:20.254478 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m14:40:20.254828 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:40:20.271481 [debug] [ThreadPool]: SQL status: OK in 0.017 seconds
+[0m14:40:20.272765 [debug] [ThreadPool]: On list_dev: Close
+[0m14:40:20.273590 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m14:40:20.274091 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m14:40:20.279494 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:40:20.279821 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m14:40:20.280067 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:40:20.281034 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m14:40:20.282748 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:40:20.283113 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m14:40:20.283839 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:40:20.284170 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:40:20.284509 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m14:40:20.285250 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:40:20.286260 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m14:40:20.286528 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:40:20.286761 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m14:40:20.287178 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:40:20.287441 [debug] [ThreadPool]: On create_dev_main: Close
+[0m14:40:20.289077 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m14:40:20.293394 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:40:20.293781 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m14:40:20.294034 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:40:20.294514 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:40:20.294766 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:40:20.294994 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m14:40:20.298431 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m14:40:20.299606 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m14:40:20.300634 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m14:40:20.300925 [debug] [ThreadPool]: On list_dev_main: Close
+[0m14:40:20.302199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '44436ebd-19a7-42ba-a2d4-d4b9c6160df4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D4CA1F860>]}
+[0m14:40:20.302656 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:40:20.302930 [debug] [MainThread]: On master: BEGIN
+[0m14:40:20.303164 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:40:20.303782 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m14:40:20.304103 [debug] [MainThread]: On master: COMMIT
+[0m14:40:20.304359 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:40:20.304579 [debug] [MainThread]: On master: COMMIT
+[0m14:40:20.304980 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:40:20.305295 [debug] [MainThread]: On master: Close
+[0m14:40:20.308414 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:40:20.308923 [info ] [Thread-1 (]: 1 of 4 START sql view model main.customer_sales ................................ [RUN]
+[0m14:40:20.309511 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.customer_segment_pipeline_lab3.customer_sales'
+[0m14:40:20.309845 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:40:20.315401 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:20.316522 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:40:20.349756 [debug] [Thread-1 (]: Writing runtime sql for node "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:20.350868 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:20.351248 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: BEGIN
+[0m14:40:20.351546 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:40:20.352310 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:20.352680 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:20.352982 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_sales"} */
+
+  
+  create view "dev"."main"."customer_sales__dbt_tmp" as (
+    SELECT
+    customer,
+    SUM(amount) AS tatal_sales
+FROM "dev"."main"."sales_data"
+GROUP BY customer
+  );
+
+[0m14:40:20.353920 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:20.358815 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:20.359180 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_sales"} */
+alter view "dev"."main"."customer_sales" rename to "customer_sales__dbt_backup"
+[0m14:40:20.359804 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:20.361635 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:20.361970 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_sales"} */
+alter view "dev"."main"."customer_sales__dbt_tmp" rename to "customer_sales"
+[0m14:40:20.362544 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:20.374693 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: COMMIT
+[0m14:40:20.375064 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:20.375366 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: COMMIT
+[0m14:40:20.378338 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m14:40:20.382484 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:20.382833 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_sales"} */
+
+      drop view if exists "dev"."main"."customer_sales__dbt_backup" cascade
+    
+[0m14:40:20.383960 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:20.386084 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: Close
+[0m14:40:20.387751 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '44436ebd-19a7-42ba-a2d4-d4b9c6160df4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D4CA81550>]}
+[0m14:40:20.388350 [info ] [Thread-1 (]: 1 of 4 OK created sql view model main.customer_sales ........................... [[32mOK[0m in 0.08s]
+[0m14:40:20.388976 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:40:20.389333 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:40:20.389755 [info ] [Thread-1 (]: 2 of 4 START sql table model main.my_first_dbt_model ........................... [RUN]
+[0m14:40:20.390396 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.customer_segment_pipeline_lab3.customer_sales, now model.customer_segment_pipeline_lab3.my_first_dbt_model)
+[0m14:40:20.390758 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:40:20.392431 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:20.393306 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:40:20.415806 [debug] [Thread-1 (]: Writing runtime sql for node "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:20.418666 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:20.419514 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: BEGIN
+[0m14:40:20.420205 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:40:20.421399 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:20.422137 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:20.422841 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_first_dbt_model"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."my_first_dbt_model__dbt_tmp"
+  
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+  
+[0m14:40:20.425121 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m14:40:20.432304 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:20.432883 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_first_dbt_model"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'my_first_dbt_model'
+  
+[0m14:40:20.433976 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:20.435374 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:20.435753 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_first_dbt_model"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'my_first_dbt_model'
+  
+[0m14:40:20.436728 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:20.438961 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:20.439323 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model" rename to "my_first_dbt_model__dbt_backup"
+[0m14:40:20.440169 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:20.443430 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:20.444083 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m14:40:20.445230 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:20.450691 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: COMMIT
+[0m14:40:20.451065 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:20.451352 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: COMMIT
+[0m14:40:20.452730 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:20.454104 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:20.454430 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_first_dbt_model"} */
+
+      drop table if exists "dev"."main"."my_first_dbt_model__dbt_backup" cascade
+    
+[0m14:40:20.455533 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:20.456729 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: Close
+[0m14:40:20.457277 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '44436ebd-19a7-42ba-a2d4-d4b9c6160df4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D4C8133E0>]}
+[0m14:40:20.457837 [info ] [Thread-1 (]: 2 of 4 OK created sql table model main.my_first_dbt_model ...................... [[32mOK[0m in 0.07s]
+[0m14:40:20.458540 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:40:20.458919 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:40:20.459363 [info ] [Thread-1 (]: 3 of 4 START sql view model main.customer_segment .............................. [RUN]
+[0m14:40:20.459996 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.customer_segment_pipeline_lab3.my_first_dbt_model, now model.customer_segment_pipeline_lab3.customer_segment)
+[0m14:40:20.460351 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:40:20.461961 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:40:20.462826 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:40:20.465715 [debug] [Thread-1 (]: Writing runtime sql for node "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:40:20.466636 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:40:20.466975 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: BEGIN
+[0m14:40:20.467254 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:40:20.467797 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:20.468119 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:40:20.468432 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_segment"} */
+
+  
+  create view "dev"."main"."customer_segment__dbt_tmp" as (
+    SELECT
+    customer,
+    total_sales,
+    CASE
+        WHEN total_sales > 100000 THEN 'High Value Customer'
+        WHEN total_sales BETWEEN 50000 AND 100000 THEN 'Medium value Customer'
+        ELSE 'Low Value Customer'
+    END AS customer_segment
+FROM "dev"."main"."customer_sales"
+  );
+
+[0m14:40:20.469441 [debug] [Thread-1 (]: DuckDB adapter: duckdb error: Binder Error: Referenced column "total_sales" not found in FROM clause!
+Candidate bindings: "tatal_sales", "customer"
+
+LINE 7:     total_sales,
+            ^
+[0m14:40:20.469801 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_segment"} */
+
+  
+  create view "dev"."main"."customer_segment__dbt_tmp" as (
+    SELECT
+    customer,
+    total_sales,
+    CASE
+        WHEN total_sales > 100000 THEN 'High Value Customer'
+        WHEN total_sales BETWEEN 50000 AND 100000 THEN 'Medium value Customer'
+        ELSE 'Low Value Customer'
+    END AS customer_segment
+FROM "dev"."main"."customer_sales"
+  );
+
+[0m14:40:20.470099 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m14:40:20.470384 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: ROLLBACK
+[0m14:40:20.472188 [debug] [Thread-1 (]: Failed to rollback 'model.customer_segment_pipeline_lab3.customer_segment'
+[0m14:40:20.472643 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: Close
+[0m14:40:20.477800 [debug] [Thread-1 (]: Runtime Error in model customer_segment (models\example\customer_segment.sql)
+  Binder Error: Referenced column "total_sales" not found in FROM clause!
+  Candidate bindings: "tatal_sales", "customer"
+  
+  LINE 7:     total_sales,
+              ^
+[0m14:40:20.478335 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '44436ebd-19a7-42ba-a2d4-d4b9c6160df4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D4CB8AA30>]}
+[0m14:40:20.478921 [error] [Thread-1 (]: 3 of 4 ERROR creating sql view model main.customer_segment ..................... [[31mERROR[0m in 0.02s]
+[0m14:40:20.479726 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:40:20.480090 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:40:20.480584 [debug] [Thread-4 (]: Marking all children of 'model.customer_segment_pipeline_lab3.customer_segment' to be skipped because of status 'error'.  Reason: Runtime Error in model customer_segment (models\example\customer_segment.sql)
+  Binder Error: Referenced column "total_sales" not found in FROM clause!
+  Candidate bindings: "tatal_sales", "customer"
+  
+  LINE 7:     total_sales,
+              ^.
+[0m14:40:20.481206 [info ] [Thread-1 (]: 4 of 4 START sql view model main.my_second_dbt_model ........................... [RUN]
+[0m14:40:20.482506 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.customer_segment_pipeline_lab3.customer_segment, now model.customer_segment_pipeline_lab3.my_second_dbt_model)
+[0m14:40:20.482869 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:40:20.484638 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:20.485653 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:40:20.488157 [debug] [Thread-1 (]: Writing runtime sql for node "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:20.489083 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:20.489420 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: BEGIN
+[0m14:40:20.489704 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:40:20.490307 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:20.490651 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:20.490963 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_second_dbt_model"} */
+
+  
+  create view "dev"."main"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dev"."main"."my_first_dbt_model"
+where id = 1
+  );
+
+[0m14:40:20.491673 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:20.493721 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:20.494115 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model" rename to "my_second_dbt_model__dbt_backup"
+[0m14:40:20.494969 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:20.496819 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:20.497153 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m14:40:20.497722 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:20.499102 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: COMMIT
+[0m14:40:20.499436 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:20.499710 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: COMMIT
+[0m14:40:20.502219 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m14:40:20.503567 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:20.503914 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_second_dbt_model"} */
+
+      drop view if exists "dev"."main"."my_second_dbt_model__dbt_backup" cascade
+    
+[0m14:40:20.504956 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:20.506690 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: Close
+[0m14:40:20.507182 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '44436ebd-19a7-42ba-a2d4-d4b9c6160df4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D4741E4D0>]}
+[0m14:40:20.507702 [info ] [Thread-1 (]: 4 of 4 OK created sql view model main.my_second_dbt_model ...................... [[32mOK[0m in 0.02s]
+[0m14:40:20.508265 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:40:20.509557 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:40:20.509867 [debug] [MainThread]: On master: BEGIN
+[0m14:40:20.510107 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:40:20.510600 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:40:20.510873 [debug] [MainThread]: On master: COMMIT
+[0m14:40:20.511156 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:40:20.511396 [debug] [MainThread]: On master: COMMIT
+[0m14:40:20.511790 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:40:20.512041 [debug] [MainThread]: On master: Close
+[0m14:40:20.512368 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:40:20.512601 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m14:40:20.512798 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m14:40:20.513003 [debug] [MainThread]: Connection 'model.customer_segment_pipeline_lab3.my_second_dbt_model' was properly closed.
+[0m14:40:20.513293 [info ] [MainThread]: 
+[0m14:40:20.513784 [info ] [MainThread]: Finished running 1 table model, 3 view models in 0 hours 0 minutes and 0.32 seconds (0.32s).
+[0m14:40:20.514842 [debug] [MainThread]: Command end result
+[0m14:40:20.545191 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\manifest.json
+[0m14:40:20.548226 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\semantic_manifest.json
+[0m14:40:20.552102 [debug] [MainThread]: Wrote artifact OsiDocument to C:\dbt_demo\customer_segment_pipeline_lab3\target\osi_document.json
+[0m14:40:20.558937 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\dbt_demo\customer_segment_pipeline_lab3\target\run_results.json
+[0m14:40:20.559285 [info ] [MainThread]: 
+[0m14:40:20.559862 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:40:20.560310 [info ] [MainThread]: 
+[0m14:40:20.560746 [error] [MainThread]: [[31mERROR[0m]: in model customer_segment (models\example\customer_segment.sql)
+[0m14:40:20.561141 [error] [MainThread]:   Runtime Error in model customer_segment (models\example\customer_segment.sql)
+  Binder Error: Referenced column "total_sales" not found in FROM clause!
+  Candidate bindings: "tatal_sales", "customer"
+  
+  LINE 7:     total_sales,
+              ^
+[0m14:40:20.561441 [info ] [MainThread]: 
+[0m14:40:20.561898 [info ] [MainThread]:   compiled code at target\compiled\customer_segment_pipeline_lab3\models\example\customer_segment.sql
+[0m14:40:20.562302 [info ] [MainThread]: 
+[0m14:40:20.562641 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=1 SKIP=0 NO-OP=0 REUSED=0 TOTAL=4
+[0m14:40:20.563357 [debug] [MainThread]: Command `dbt run` failed at 14:40:20.563246 after 1.71 seconds
+[0m14:40:20.563737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D4BBDACF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D4B9AD5C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013D4A17ECF0>]}
+[0m14:40:20.564052 [debug] [MainThread]: Flushing usage events
+[0m14:40:21.381311 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:40:46.388363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E4980D2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E4BF63ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E4BF63750>]}
+
+
+============================== 14:40:46.396845 | dec394e1-3b33-49c4-bb95-53483ee82f82 ==============================
+[0m14:40:46.396845 [info ] [MainThread]: Running with dbt=1.12.0
+[0m14:40:46.398442 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\ganas\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\dbt_demo\\customer_segment_pipeline_lab3\\logs'}
+[0m14:40:46.632172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dec394e1-3b33-49c4-bb95-53483ee82f82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E49EF5A70>]}
+[0m14:40:46.701069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dec394e1-3b33-49c4-bb95-53483ee82f82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E4C0E3020>]}
+[0m14:40:46.703296 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m14:40:46.893623 [debug] [MainThread]: checksum: af7589022dc7d326646b53de9309bcceb4e4ca31a8788b42225a83f7cb73893b, vars: {}, profile: customer_segment_pipeline_lab3, target: dev, version: 1.12.0
+[0m14:40:47.099587 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:40:47.100219 [debug] [MainThread]: Partial parsing: updated file: customer_segment_pipeline_lab3://models\customer_sales.sql
+[0m14:40:47.399581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dec394e1-3b33-49c4-bb95-53483ee82f82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E4C803850>]}
+[0m14:40:47.489317 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\manifest.json
+[0m14:40:47.492386 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\semantic_manifest.json
+[0m14:40:47.510742 [debug] [MainThread]: Wrote artifact OsiDocument to C:\dbt_demo\customer_segment_pipeline_lab3\target\osi_document.json
+[0m14:40:47.521548 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'dec394e1-3b33-49c4-bb95-53483ee82f82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E4CB34500>]}
+[0m14:40:47.521995 [info ] [MainThread]: Found 4 models, 1 seed, 4 data tests, 486 macros
+[0m14:40:47.522447 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dec394e1-3b33-49c4-bb95-53483ee82f82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E4CAD3A10>]}
+[0m14:40:47.524370 [info ] [MainThread]: 
+[0m14:40:47.524930 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:40:47.525366 [info ] [MainThread]: 
+[0m14:40:47.525970 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m14:40:47.530654 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m14:40:47.585595 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m14:40:47.585989 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m14:40:47.586265 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:40:47.603012 [debug] [ThreadPool]: SQL status: OK in 0.017 seconds
+[0m14:40:47.604499 [debug] [ThreadPool]: On list_dev: Close
+[0m14:40:47.605470 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m14:40:47.606033 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m14:40:47.611461 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:40:47.611797 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m14:40:47.612047 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:40:47.612884 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m14:40:47.614148 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:40:47.614473 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m14:40:47.614957 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:40:47.615227 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:40:47.615456 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m14:40:47.615969 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:40:47.616745 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m14:40:47.617028 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m14:40:47.617262 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m14:40:47.617710 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:40:47.618007 [debug] [ThreadPool]: On create_dev_main: Close
+[0m14:40:47.619628 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m14:40:47.624030 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:40:47.624337 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m14:40:47.624572 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:40:47.625070 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:40:47.625321 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:40:47.625541 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m14:40:47.629045 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m14:40:47.630223 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m14:40:47.631243 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m14:40:47.631531 [debug] [ThreadPool]: On list_dev_main: Close
+[0m14:40:47.632856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'dec394e1-3b33-49c4-bb95-53483ee82f82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E4CD3F110>]}
+[0m14:40:47.633320 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:40:47.633730 [debug] [MainThread]: On master: BEGIN
+[0m14:40:47.634081 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:40:47.634629 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m14:40:47.634943 [debug] [MainThread]: On master: COMMIT
+[0m14:40:47.635209 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:40:47.635441 [debug] [MainThread]: On master: COMMIT
+[0m14:40:47.635882 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:40:47.636144 [debug] [MainThread]: On master: Close
+[0m14:40:47.638655 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:40:47.639178 [info ] [Thread-1 (]: 1 of 4 START sql view model main.customer_sales ................................ [RUN]
+[0m14:40:47.639848 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.customer_segment_pipeline_lab3.customer_sales'
+[0m14:40:47.640187 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:40:47.646062 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:47.646990 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:40:47.676447 [debug] [Thread-1 (]: Writing runtime sql for node "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:47.677505 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:47.677880 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: BEGIN
+[0m14:40:47.678167 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:40:47.678943 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:47.679288 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:47.679597 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_sales"} */
+
+  
+  create view "dev"."main"."customer_sales__dbt_tmp" as (
+    SELECT
+    customer,
+    SUM(amount) AS total_sales
+FROM "dev"."main"."sales_data"
+GROUP BY customer
+  );
+
+[0m14:40:47.680349 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:47.685316 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:47.685750 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_sales"} */
+alter view "dev"."main"."customer_sales" rename to "customer_sales__dbt_backup"
+[0m14:40:47.686483 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:47.688463 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:47.688805 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_sales"} */
+alter view "dev"."main"."customer_sales__dbt_tmp" rename to "customer_sales"
+[0m14:40:47.689459 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:47.702904 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: COMMIT
+[0m14:40:47.703327 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:47.703699 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: COMMIT
+[0m14:40:47.708214 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m14:40:47.712673 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:40:47.713054 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_sales"} */
+
+      drop view if exists "dev"."main"."customer_sales__dbt_backup" cascade
+    
+[0m14:40:47.714470 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:47.716935 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_sales: Close
+[0m14:40:47.718775 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dec394e1-3b33-49c4-bb95-53483ee82f82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E4CD996D0>]}
+[0m14:40:47.719416 [info ] [Thread-1 (]: 1 of 4 OK created sql view model main.customer_sales ........................... [[32mOK[0m in 0.08s]
+[0m14:40:47.720187 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:40:47.720558 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:40:47.721073 [info ] [Thread-1 (]: 2 of 4 START sql table model main.my_first_dbt_model ........................... [RUN]
+[0m14:40:47.721679 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.customer_segment_pipeline_lab3.customer_sales, now model.customer_segment_pipeline_lab3.my_first_dbt_model)
+[0m14:40:47.722136 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:40:47.723944 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:47.724847 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:40:47.743305 [debug] [Thread-1 (]: Writing runtime sql for node "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:47.744864 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:47.745254 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: BEGIN
+[0m14:40:47.745546 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:40:47.746487 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:47.747099 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:47.747419 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_first_dbt_model"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."my_first_dbt_model__dbt_tmp"
+  
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+  
+[0m14:40:47.748643 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:47.753433 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:47.753850 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_first_dbt_model"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'my_first_dbt_model'
+  
+[0m14:40:47.754725 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:47.756214 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:47.756570 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_first_dbt_model"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'my_first_dbt_model'
+  
+[0m14:40:47.757612 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:47.759921 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:47.760264 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model" rename to "my_first_dbt_model__dbt_backup"
+[0m14:40:47.760884 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:47.762755 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:47.763084 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_first_dbt_model"} */
+alter table "dev"."main"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m14:40:47.763682 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:47.768388 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: COMMIT
+[0m14:40:47.768740 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:47.769024 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: COMMIT
+[0m14:40:47.771531 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m14:40:47.772922 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:40:47.773267 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_first_dbt_model"} */
+
+      drop table if exists "dev"."main"."my_first_dbt_model__dbt_backup" cascade
+    
+[0m14:40:47.774426 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:47.775662 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_first_dbt_model: Close
+[0m14:40:47.776215 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dec394e1-3b33-49c4-bb95-53483ee82f82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E4CB3B280>]}
+[0m14:40:47.776787 [info ] [Thread-1 (]: 2 of 4 OK created sql table model main.my_first_dbt_model ...................... [[32mOK[0m in 0.05s]
+[0m14:40:47.777526 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:40:47.777883 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:40:47.778473 [info ] [Thread-1 (]: 3 of 4 START sql view model main.customer_segment .............................. [RUN]
+[0m14:40:47.779132 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.customer_segment_pipeline_lab3.my_first_dbt_model, now model.customer_segment_pipeline_lab3.customer_segment)
+[0m14:40:47.779559 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:40:47.781175 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:40:47.782107 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:40:47.784943 [debug] [Thread-1 (]: Writing runtime sql for node "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:40:47.785855 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:40:47.786191 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: BEGIN
+[0m14:40:47.786472 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:40:47.787033 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:47.787371 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:40:47.787657 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_segment"} */
+
+  
+  create view "dev"."main"."customer_segment__dbt_tmp" as (
+    SELECT
+    customer,
+    total_sales,
+    CASE
+        WHEN total_sales > 100000 THEN 'High Value Customer'
+        WHEN total_sales BETWEEN 50000 AND 100000 THEN 'Medium value Customer'
+        ELSE 'Low Value Customer'
+    END AS customer_segment
+FROM "dev"."main"."customer_sales"
+  );
+
+[0m14:40:47.788462 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:47.790480 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:40:47.790901 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_segment"} */
+alter view "dev"."main"."customer_segment__dbt_tmp" rename to "customer_segment"
+[0m14:40:47.791541 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:47.792946 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: COMMIT
+[0m14:40:47.793318 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:40:47.793656 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: COMMIT
+[0m14:40:47.795123 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:47.796543 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:40:47.796863 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_segment"} */
+
+      drop view if exists "dev"."main"."customer_segment__dbt_backup" cascade
+    
+[0m14:40:47.797473 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:47.798737 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: Close
+[0m14:40:47.799266 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dec394e1-3b33-49c4-bb95-53483ee82f82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E4CF47CF0>]}
+[0m14:40:47.799838 [info ] [Thread-1 (]: 3 of 4 OK created sql view model main.customer_segment ......................... [[32mOK[0m in 0.02s]
+[0m14:40:47.800523 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:40:47.800883 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:40:47.801333 [info ] [Thread-1 (]: 4 of 4 START sql view model main.my_second_dbt_model ........................... [RUN]
+[0m14:40:47.801957 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.customer_segment_pipeline_lab3.customer_segment, now model.customer_segment_pipeline_lab3.my_second_dbt_model)
+[0m14:40:47.802289 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:40:47.803932 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:47.804902 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:40:47.807480 [debug] [Thread-1 (]: Writing runtime sql for node "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:47.808610 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:47.808966 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: BEGIN
+[0m14:40:47.809242 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:40:47.809831 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:47.810149 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:47.810423 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_second_dbt_model"} */
+
+  
+  create view "dev"."main"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "dev"."main"."my_first_dbt_model"
+where id = 1
+  );
+
+[0m14:40:47.811180 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:47.813753 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:47.814205 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model" rename to "my_second_dbt_model__dbt_backup"
+[0m14:40:47.814907 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:47.816853 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:47.817224 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_second_dbt_model"} */
+alter view "dev"."main"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m14:40:47.817852 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m14:40:47.819295 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: COMMIT
+[0m14:40:47.819661 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:47.820012 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: COMMIT
+[0m14:40:47.821104 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:47.822555 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:40:47.822891 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.my_second_dbt_model"} */
+
+      drop view if exists "dev"."main"."my_second_dbt_model__dbt_backup" cascade
+    
+[0m14:40:47.824153 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:40:47.825366 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.my_second_dbt_model: Close
+[0m14:40:47.826004 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'dec394e1-3b33-49c4-bb95-53483ee82f82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E4CE790D0>]}
+[0m14:40:47.826609 [info ] [Thread-1 (]: 4 of 4 OK created sql view model main.my_second_dbt_model ...................... [[32mOK[0m in 0.02s]
+[0m14:40:47.827372 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:40:47.828627 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:40:47.828951 [debug] [MainThread]: On master: BEGIN
+[0m14:40:47.829202 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:40:47.829780 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m14:40:47.830206 [debug] [MainThread]: On master: COMMIT
+[0m14:40:47.830462 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:40:47.830674 [debug] [MainThread]: On master: COMMIT
+[0m14:40:47.831097 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:40:47.831377 [debug] [MainThread]: On master: Close
+[0m14:40:47.831747 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:40:47.831973 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m14:40:47.832160 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m14:40:47.832379 [debug] [MainThread]: Connection 'model.customer_segment_pipeline_lab3.my_second_dbt_model' was properly closed.
+[0m14:40:47.832691 [info ] [MainThread]: 
+[0m14:40:47.833128 [info ] [MainThread]: Finished running 1 table model, 3 view models in 0 hours 0 minutes and 0.31 seconds (0.31s).
+[0m14:40:47.834294 [debug] [MainThread]: Command end result
+[0m14:40:47.865295 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\manifest.json
+[0m14:40:47.868629 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\semantic_manifest.json
+[0m14:40:47.871825 [debug] [MainThread]: Wrote artifact OsiDocument to C:\dbt_demo\customer_segment_pipeline_lab3\target\osi_document.json
+[0m14:40:47.879215 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\dbt_demo\customer_segment_pipeline_lab3\target\run_results.json
+[0m14:40:47.879548 [info ] [MainThread]: 
+[0m14:40:47.880007 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:40:47.880500 [info ] [MainThread]: 
+[0m14:40:47.880954 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=4
+[0m14:40:47.881752 [debug] [MainThread]: Command `dbt run` succeeded at 14:40:47.881638 after 1.71 seconds
+[0m14:40:47.882125 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E4BFAACF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E4BD7D5C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E47DD7E30>]}
+[0m14:40:47.882503 [debug] [MainThread]: Flushing usage events
+[0m14:40:48.644222 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:41:07.209454 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001579B34D2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001579DAA3ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001579DAA3750>]}
+
+
+============================== 14:41:07.217756 | 997163a9-bc25-4d33-8bae-54c13c211278 ==============================
+[0m14:41:07.217756 [info ] [MainThread]: Running with dbt=1.12.0
+[0m14:41:07.219196 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\ganas\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt show --select customer_segment', 'log_path': 'C:\\dbt_demo\\customer_segment_pipeline_lab3\\logs'}
+[0m14:41:07.463027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '997163a9-bc25-4d33-8bae-54c13c211278', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001579BA35A70>]}
+[0m14:41:07.528460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '997163a9-bc25-4d33-8bae-54c13c211278', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001579DC23020>]}
+[0m14:41:07.539109 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m14:41:07.732999 [debug] [MainThread]: checksum: af7589022dc7d326646b53de9309bcceb4e4ca31a8788b42225a83f7cb73893b, vars: {}, profile: customer_segment_pipeline_lab3, target: dev, version: 1.12.0
+[0m14:41:07.929898 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:41:07.930283 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m14:41:07.930532 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:41:07.940406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '997163a9-bc25-4d33-8bae-54c13c211278', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001579E535650>]}
+[0m14:41:08.063956 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\manifest.json
+[0m14:41:08.066840 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\semantic_manifest.json
+[0m14:41:08.084542 [debug] [MainThread]: Wrote artifact OsiDocument to C:\dbt_demo\customer_segment_pipeline_lab3\target\osi_document.json
+[0m14:41:08.087408 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '997163a9-bc25-4d33-8bae-54c13c211278', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001579E3E99A0>]}
+[0m14:41:08.087886 [info ] [MainThread]: Found 4 models, 1 seed, 4 data tests, 486 macros
+[0m14:41:08.088369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '997163a9-bc25-4d33-8bae-54c13c211278', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001579E493AF0>]}
+[0m14:41:08.089922 [info ] [MainThread]: 
+[0m14:41:08.090477 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:41:08.090883 [info ] [MainThread]: 
+[0m14:41:08.091529 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m14:41:08.096704 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m14:41:08.149411 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:41:08.149794 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m14:41:08.150050 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:41:08.165235 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m14:41:08.165623 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:41:08.165906 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m14:41:08.169908 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m14:41:08.171204 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m14:41:08.172209 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m14:41:08.172511 [debug] [ThreadPool]: On list_dev_main: Close
+[0m14:41:08.174091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '997163a9-bc25-4d33-8bae-54c13c211278', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001579E7129C0>]}
+[0m14:41:08.177042 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:41:08.177561 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.customer_segment_pipeline_lab3.customer_segment'
+[0m14:41:08.177886 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:41:08.183521 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:41:08.184552 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:41:08.191295 [debug] [Thread-1 (]: Using duckdb connection "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:41:08.191678 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "node_id": "model.customer_segment_pipeline_lab3.customer_segment"} */
+
+  
+  SELECT
+    customer,
+    total_sales,
+    CASE
+        WHEN total_sales > 100000 THEN 'High Value Customer'
+        WHEN total_sales BETWEEN 50000 AND 100000 THEN 'Medium value Customer'
+        ELSE 'Low Value Customer'
+    END AS customer_segment
+FROM "dev"."main"."customer_sales"
+  
+  limit 5
+
+[0m14:41:08.192005 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:41:08.195597 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m14:41:08.198484 [debug] [Thread-1 (]: On model.customer_segment_pipeline_lab3.customer_segment: Close
+[0m14:41:08.199211 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:41:08.200252 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:41:08.200566 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m14:41:08.200820 [debug] [MainThread]: Connection 'model.customer_segment_pipeline_lab3.customer_segment' was properly closed.
+[0m14:41:08.201646 [debug] [MainThread]: Command end result
+[0m14:41:08.231907 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\manifest.json
+[0m14:41:08.235063 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\semantic_manifest.json
+[0m14:41:08.237911 [debug] [MainThread]: Wrote artifact OsiDocument to C:\dbt_demo\customer_segment_pipeline_lab3\target\osi_document.json
+[0m14:41:08.245180 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\dbt_demo\customer_segment_pipeline_lab3\target\run_results.json
+[0m14:41:08.245632 [info ] [MainThread]: Previewing node 'customer_segment':
+| customer | total_sales | customer_segment     |
+| -------- | ----------- | -------------------- |
+| Charlie  |       15000 | Low Value Customer   |
+| Alice    |      157500 | High Value Customer  |
+| Bob      |       67700 | Medium value Cust... |
+| Alex     |       20000 | Low Value Customer   |
+
+[0m14:41:08.246588 [debug] [MainThread]: Command `dbt show` succeeded at 14:41:08.246459 after 1.27 seconds
+[0m14:41:08.246930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001579D757C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001579E486200>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001579E4862B0>]}
+[0m14:41:08.247244 [debug] [MainThread]: Flushing usage events
+[0m14:41:09.002587 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:41:39.828766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012ADA6BD2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012ADCE23D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012ADCE23750>]}
+
+
+============================== 14:41:39.833337 | 72b3caf4-111e-4b70-be89-792ba8873f0c ==============================
+[0m14:41:39.833337 [info ] [MainThread]: Running with dbt=1.12.0
+[0m14:41:39.834019 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\ganas\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt docs generate', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\dbt_demo\\customer_segment_pipeline_lab3\\logs'}
+[0m14:41:40.081552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '72b3caf4-111e-4b70-be89-792ba8873f0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012ADADB5A70>]}
+[0m14:41:40.153646 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '72b3caf4-111e-4b70-be89-792ba8873f0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012ADCFA3020>]}
+[0m14:41:40.155896 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m14:41:40.350489 [debug] [MainThread]: checksum: af7589022dc7d326646b53de9309bcceb4e4ca31a8788b42225a83f7cb73893b, vars: {}, profile: customer_segment_pipeline_lab3, target: dev, version: 1.12.0
+[0m14:41:40.554973 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m14:41:40.555367 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m14:41:40.555619 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m14:41:40.564902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '72b3caf4-111e-4b70-be89-792ba8873f0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012ADD6F3350>]}
+[0m14:41:40.612778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '72b3caf4-111e-4b70-be89-792ba8873f0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012ADD71ED50>]}
+[0m14:41:40.613264 [info ] [MainThread]: Found 4 models, 1 seed, 4 data tests, 486 macros
+[0m14:41:40.613936 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '72b3caf4-111e-4b70-be89-792ba8873f0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012ADD92B310>]}
+[0m14:41:40.616029 [info ] [MainThread]: 
+[0m14:41:40.616706 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:41:40.617214 [info ] [MainThread]: 
+[0m14:41:40.617923 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m14:41:40.622831 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m14:41:40.682526 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:41:40.682916 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m14:41:40.683302 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:41:40.699861 [debug] [ThreadPool]: SQL status: OK in 0.017 seconds
+[0m14:41:40.700273 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m14:41:40.700573 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m14:41:40.704896 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m14:41:40.706210 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m14:41:40.707242 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m14:41:40.707537 [debug] [ThreadPool]: On list_dev_main: Close
+[0m14:41:40.709110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '72b3caf4-111e-4b70-be89-792ba8873f0c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012ADDA6DD90>]}
+[0m14:41:40.712538 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:41:40.713081 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.customer_segment_pipeline_lab3.my_first_dbt_model'
+[0m14:41:40.713386 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:41:40.718985 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.my_first_dbt_model"
+[0m14:41:40.719836 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:41:40.720470 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.my_first_dbt_model
+[0m14:41:40.720820 [debug] [Thread-1 (]: Began running node seed.customer_segment_pipeline_lab3.sales_data
+[0m14:41:40.721203 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.customer_segment_pipeline_lab3.my_first_dbt_model, now seed.customer_segment_pipeline_lab3.sales_data)
+[0m14:41:40.721720 [debug] [Thread-1 (]: Began compiling node seed.customer_segment_pipeline_lab3.sales_data
+[0m14:41:40.722614 [debug] [Thread-1 (]: Began executing node seed.customer_segment_pipeline_lab3.sales_data
+[0m14:41:40.723245 [debug] [Thread-1 (]: Finished running node seed.customer_segment_pipeline_lab3.sales_data
+[0m14:41:40.724014 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:41:40.724424 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.customer_segment_pipeline_lab3.sales_data, now model.customer_segment_pipeline_lab3.customer_sales)
+[0m14:41:40.724730 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:41:40.726271 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.customer_sales"
+[0m14:41:40.727244 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:41:40.727844 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.customer_sales
+[0m14:41:40.728155 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:41:40.728586 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.customer_segment_pipeline_lab3.customer_sales, now model.customer_segment_pipeline_lab3.my_second_dbt_model)
+[0m14:41:40.728948 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:41:40.731002 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.my_second_dbt_model"
+[0m14:41:40.731872 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:41:40.732487 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.my_second_dbt_model
+[0m14:41:40.732829 [debug] [Thread-1 (]: Began running node test.customer_segment_pipeline_lab3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m14:41:40.733407 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.customer_segment_pipeline_lab3.my_second_dbt_model, now test.customer_segment_pipeline_lab3.not_null_my_first_dbt_model_id.5fb22c2710)
+[0m14:41:40.733851 [debug] [Thread-1 (]: Began compiling node test.customer_segment_pipeline_lab3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m14:41:40.746085 [debug] [Thread-1 (]: Writing injected SQL for node "test.customer_segment_pipeline_lab3.not_null_my_first_dbt_model_id.5fb22c2710"
+[0m14:41:40.747278 [debug] [Thread-1 (]: Began executing node test.customer_segment_pipeline_lab3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m14:41:40.747908 [debug] [Thread-1 (]: Finished running node test.customer_segment_pipeline_lab3.not_null_my_first_dbt_model_id.5fb22c2710
+[0m14:41:40.748238 [debug] [Thread-1 (]: Began running node test.customer_segment_pipeline_lab3.unique_my_first_dbt_model_id.16e066b321
+[0m14:41:40.748643 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.customer_segment_pipeline_lab3.not_null_my_first_dbt_model_id.5fb22c2710, now test.customer_segment_pipeline_lab3.unique_my_first_dbt_model_id.16e066b321)
+[0m14:41:40.748942 [debug] [Thread-1 (]: Began compiling node test.customer_segment_pipeline_lab3.unique_my_first_dbt_model_id.16e066b321
+[0m14:41:40.757245 [debug] [Thread-1 (]: Writing injected SQL for node "test.customer_segment_pipeline_lab3.unique_my_first_dbt_model_id.16e066b321"
+[0m14:41:40.758327 [debug] [Thread-1 (]: Began executing node test.customer_segment_pipeline_lab3.unique_my_first_dbt_model_id.16e066b321
+[0m14:41:40.758991 [debug] [Thread-1 (]: Finished running node test.customer_segment_pipeline_lab3.unique_my_first_dbt_model_id.16e066b321
+[0m14:41:40.759325 [debug] [Thread-1 (]: Began running node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:41:40.759669 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.customer_segment_pipeline_lab3.unique_my_first_dbt_model_id.16e066b321, now model.customer_segment_pipeline_lab3.customer_segment)
+[0m14:41:40.759979 [debug] [Thread-1 (]: Began compiling node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:41:40.761452 [debug] [Thread-1 (]: Writing injected SQL for node "model.customer_segment_pipeline_lab3.customer_segment"
+[0m14:41:40.762329 [debug] [Thread-1 (]: Began executing node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:41:40.762928 [debug] [Thread-1 (]: Finished running node model.customer_segment_pipeline_lab3.customer_segment
+[0m14:41:40.763243 [debug] [Thread-1 (]: Began running node test.customer_segment_pipeline_lab3.not_null_my_second_dbt_model_id.151b76d778
+[0m14:41:40.763666 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.customer_segment_pipeline_lab3.customer_segment, now test.customer_segment_pipeline_lab3.not_null_my_second_dbt_model_id.151b76d778)
+[0m14:41:40.764028 [debug] [Thread-1 (]: Began compiling node test.customer_segment_pipeline_lab3.not_null_my_second_dbt_model_id.151b76d778
+[0m14:41:40.769395 [debug] [Thread-1 (]: Writing injected SQL for node "test.customer_segment_pipeline_lab3.not_null_my_second_dbt_model_id.151b76d778"
+[0m14:41:40.772634 [debug] [Thread-1 (]: Began executing node test.customer_segment_pipeline_lab3.not_null_my_second_dbt_model_id.151b76d778
+[0m14:41:40.773283 [debug] [Thread-1 (]: Finished running node test.customer_segment_pipeline_lab3.not_null_my_second_dbt_model_id.151b76d778
+[0m14:41:40.773695 [debug] [Thread-1 (]: Began running node test.customer_segment_pipeline_lab3.unique_my_second_dbt_model_id.57a0f8c493
+[0m14:41:40.774232 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.customer_segment_pipeline_lab3.not_null_my_second_dbt_model_id.151b76d778, now test.customer_segment_pipeline_lab3.unique_my_second_dbt_model_id.57a0f8c493)
+[0m14:41:40.774778 [debug] [Thread-1 (]: Began compiling node test.customer_segment_pipeline_lab3.unique_my_second_dbt_model_id.57a0f8c493
+[0m14:41:40.779848 [debug] [Thread-1 (]: Writing injected SQL for node "test.customer_segment_pipeline_lab3.unique_my_second_dbt_model_id.57a0f8c493"
+[0m14:41:40.780897 [debug] [Thread-1 (]: Began executing node test.customer_segment_pipeline_lab3.unique_my_second_dbt_model_id.57a0f8c493
+[0m14:41:40.781579 [debug] [Thread-1 (]: Finished running node test.customer_segment_pipeline_lab3.unique_my_second_dbt_model_id.57a0f8c493
+[0m14:41:40.782620 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:41:40.782964 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m14:41:40.783233 [debug] [MainThread]: Connection 'test.customer_segment_pipeline_lab3.unique_my_second_dbt_model_id.57a0f8c493' was properly closed.
+[0m14:41:40.784744 [debug] [MainThread]: Command end result
+[0m14:41:40.871788 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\manifest.json
+[0m14:41:40.875012 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\semantic_manifest.json
+[0m14:41:40.893746 [debug] [MainThread]: Wrote artifact OsiDocument to C:\dbt_demo\customer_segment_pipeline_lab3\target\osi_document.json
+[0m14:41:40.901110 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\dbt_demo\customer_segment_pipeline_lab3\target\run_results.json
+[0m14:41:40.903651 [debug] [MainThread]: Acquiring new duckdb connection 'generate_catalog'
+[0m14:41:40.904032 [info ] [MainThread]: Building catalog
+[0m14:41:40.912517 [debug] [ThreadPool]: Acquiring new duckdb connection 'dev.information_schema'
+[0m14:41:40.918459 [debug] [ThreadPool]: Using duckdb connection "dev.information_schema"
+[0m14:41:40.918860 [debug] [ThreadPool]: On dev.information_schema: BEGIN
+[0m14:41:40.919140 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:41:40.919848 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m14:41:40.920128 [debug] [ThreadPool]: Using duckdb connection "dev.information_schema"
+[0m14:41:40.920384 [debug] [ThreadPool]: On dev.information_schema: /* {"app": "dbt", "dbt_version": "1.12.0", "profile_name": "customer_segment_pipeline_lab3", "target_name": "dev", "connection_name": "dev.information_schema"} */
+with relations AS (
+      select
+        t.table_name
+        , t.database_name
+        , t.schema_name
+        , 'BASE TABLE' as table_type
+        , t.comment as table_comment
+      from duckdb_tables() t
+      WHERE t.database_name = 'dev'
+      UNION ALL
+      SELECT v.view_name as table_name
+      , v.database_name
+      , v.schema_name
+      , 'VIEW' as table_type
+      , v.comment as table_comment
+      from duckdb_views() v
+      WHERE v.database_name = 'dev'
+    )
+    select
+        'dev' as table_database,
+        r.schema_name as table_schema,
+        r.table_name,
+        r.table_type,
+        r.table_comment,
+        c.column_name,
+        c.column_index as column_index,
+        c.data_type as column_type,
+        c.comment as column_comment,
+        NULL as table_owner
+    FROM relations r JOIN duckdb_columns() c ON r.schema_name = c.schema_name AND r.table_name = c.table_name
+    WHERE (upper(r.schema_name) = upper('main'))
+    ORDER BY
+        r.schema_name,
+        r.table_name,
+        c.column_index
+[0m14:41:40.933261 [debug] [ThreadPool]: SQL status: OK in 0.013 seconds
+[0m14:41:40.936367 [debug] [ThreadPool]: On dev.information_schema: ROLLBACK
+[0m14:41:40.937047 [debug] [ThreadPool]: Failed to rollback 'dev.information_schema'
+[0m14:41:40.937329 [debug] [ThreadPool]: On dev.information_schema: Close
+[0m14:41:40.948567 [debug] [MainThread]: Wrote artifact CatalogArtifact to C:\dbt_demo\customer_segment_pipeline_lab3\target\catalog.json
+[0m14:41:40.974703 [debug] [MainThread]: Wrote artifact WritableManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\manifest.json
+[0m14:41:40.977898 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\dbt_demo\customer_segment_pipeline_lab3\target\semantic_manifest.json
+[0m14:41:40.980749 [debug] [MainThread]: Wrote artifact OsiDocument to C:\dbt_demo\customer_segment_pipeline_lab3\target\osi_document.json
+[0m14:41:40.981071 [info ] [MainThread]: Catalog written to C:\dbt_demo\customer_segment_pipeline_lab3\target\catalog.json
+[0m14:41:40.981830 [debug] [MainThread]: Command `dbt docs generate` succeeded at 14:41:40.981717 after 1.38 seconds
+[0m14:41:40.982114 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m14:41:40.982341 [debug] [MainThread]: Connection 'dev.information_schema' was properly closed.
+[0m14:41:40.982630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012ADCAD7C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012ADDC6E570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000012ADDC6EBA0>]}
+[0m14:41:40.982951 [debug] [MainThread]: Flushing usage events
+[0m14:41:41.729733 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:41:44.059562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017CDD33D2B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017CDFA37D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017CDFA37B10>]}
+
+
+============================== 14:41:44.066966 | cdc44ead-299b-44a8-8783-260ad16360df ==============================
+[0m14:41:44.066966 [info ] [MainThread]: Running with dbt=1.12.0
+[0m14:41:44.068318 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ganas\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt docs serve', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\dbt_demo\\customer_segment_pipeline_lab3\\logs'}
+[0m14:41:44.314006 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cdc44ead-299b-44a8-8783-260ad16360df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017CDDA1DA70>]}
+[0m14:41:44.380555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cdc44ead-299b-44a8-8783-260ad16360df', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017CDB85D150>]}
+[0m14:43:25.811395 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m14:43:25.830092 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\dbt_demo\dbt_env\Lib\site-packages\dbt\cli\requires.py", line 190, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\dbt_demo\dbt_env\Lib\site-packages\dbt\cli\requires.py", line 136, in wrapper
+    return func(*args, **kwargs)
+  File "C:\dbt_demo\dbt_env\Lib\site-packages\dbt\cli\requires.py", line 287, in wrapper
+    return func(*args, **kwargs)
+  File "C:\dbt_demo\dbt_env\Lib\site-packages\dbt\cli\requires.py", line 332, in wrapper
+    return func(*args, **kwargs)
+  File "C:\dbt_demo\dbt_env\Lib\site-packages\dbt\cli\requires.py", line 379, in wrapper
+    return func(*args, **kwargs)
+  File "C:\dbt_demo\dbt_env\Lib\site-packages\dbt\cli\main.py", line 322, in docs_serve
+    results = task.run()
+  File "C:\dbt_demo\dbt_env\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ganas\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 240, in serve_forever
+    self._handle_request_noblock()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ganas\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 318, in _handle_request_noblock
+    self.process_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ganas\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 349, in process_request
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ganas\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ganas\AppData\Local\Programs\Python\Python313\Lib\http\server.py", line 683, in __init__
+    super().__init__(*args, **kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ganas\AppData\Local\Programs\Python\Python313\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "C:\Users\ganas\AppData\Local\Programs\Python\Python313\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ganas\AppData\Local\Programs\Python\Python313\Lib\http\server.py", line 415, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\ganas\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 723, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+KeyboardInterrupt
+
+[0m14:43:25.838113 [debug] [MainThread]: Command `dbt docs serve` failed at 14:43:25.836990 after 102.00 seconds
+[0m14:43:25.842431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017CE01CCC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017CE01CCB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017CE01B5B80>]}
+[0m14:43:25.845475 [debug] [MainThread]: Flushing usage events
+[0m14:43:27.165136 [debug] [MainThread]: An error was encountered while trying to flush usage events
